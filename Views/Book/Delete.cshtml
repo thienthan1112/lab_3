@@ -56,7 +56,11 @@
 
     @using (Html.BeginForm("DeleteBook", "Book", new { id = Model.ID }, FormMethod.Post))
     {
-        <input type="submit" value="Delete" class="btn btn-default" />
-
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "ListBook")
+        </div>
     }
+
+
 </div>
